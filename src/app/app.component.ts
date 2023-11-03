@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'soul-link-tracker';
+
+  private hello: String = 'george';
+
+  getDogs() {
+    const the = 'the'
+    
+  }
+
 }
