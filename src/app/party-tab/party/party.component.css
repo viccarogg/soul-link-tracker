@@ -1,0 +1,4 @@
+#party-tab {
+    display: flex;
+    flex-direction: column;
+}

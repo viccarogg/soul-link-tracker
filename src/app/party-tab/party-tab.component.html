@@ -1,1 +1,12 @@
-<p>party-tab works!</p>
+<div id="party-tab">
+    <div id="p1-party" class="party">
+        <h5>{{player1.name}}</h5>
+        <app-party [player]="player1"></app-party>
+    </div>
+    
+    <div id="p2-party" class="party">
+        <h5>{{player2.name}}</h5>
+        <app-party [player]="player2"></app-party>
+    </div>
+    
+</div>
