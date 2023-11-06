@@ -24,15 +24,9 @@ export class PartyComponent implements OnInit {
 
   createPokemon(p: Pokemon, data: any): Pokemon {
     let pkmn = {
-      name: p.currentEvo,
-      nickname: 'test',
-      level: 50,
-      sprite: data.sprites.front_default,
-      levelMet: 5,
-      currentEvo: data.name,
-      notes: ''
+      ...p,
+      sprite: data.sprites.front_default
     }
-
     return pkmn;
    }
 }

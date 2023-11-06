@@ -1,4 +1,6 @@
 
-<div *ngFor="for let p of party">
-    <app-pokemon [pkmn]="p"></app-pokemon>
+<div class="party">
+    <div *ngFor="for let p of party" class="party-member">
+        <app-pokemon [pkmn]="p"></app-pokemon>
+    </div>
 </div>

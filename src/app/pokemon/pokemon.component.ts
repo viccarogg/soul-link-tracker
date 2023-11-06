@@ -7,7 +7,9 @@ import { Component, Input } from '@angular/core';
 })
 export class PokemonComponent {
   @Input() pkmn = {
-    sprite: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/247.png'
+    sprite: '',
+    name: '',
+    level: 50
   };
 
 
