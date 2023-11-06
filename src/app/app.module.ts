@@ -16,7 +16,7 @@ import { EncounterTabComponent } from './encounter-tab/encounter-tab.component';
     AppComponent,
     PartyComponent,
     PartyTabComponent,
-    PokemonComponent
+    PokemonComponent,
     EncounterTabComponent
   ],
   imports: [
