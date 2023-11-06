@@ -13,32 +13,38 @@ export const pastPlayers = {
             {name: 'arceus',
             nickname: '',
             level: 50,
-            acquired: '',
+            levelMet: 5,
+            currentEvo: 'arceus',
             notes: ''},
             {name: 'dragonite',
             nickname: '',
             level: 50,
-            acquired: '',
+            levelMet: 5,
+            currentEvo: 'dragonite',
             notes: ''},
             {name: 'swampert',
             nickname: '',
             level: 50,
-            acquired: '',
+            levelMet: 5,
+            currentEvo: 'swampert',
             notes: ''},
             {name: 'gengar',
             nickname: '',
             level: 50,
-            acquired: '',
+            levelMet: 5,
+            currentEvo: 'gengar',
             notes: ''},
             {name: 'steelix',
             nickname: '',
             level: 50,
-            acquired: '',
+            levelMet: 5,
+            currentEvo: 'steelix',
             notes: ''},
             {name: 'clefable',
             nickname: '',
             level: 50,
-            acquired: '',
+            levelMet: 5,
+            currentEvo: 'clefable',
             notes: ''}
         ]
     },
@@ -48,32 +54,38 @@ export const pastPlayers = {
             {name: 'blastoise',
             nickname: '',
             level: 50,
-            acquired: '',
+            levelMet: 5,
+            currentEvo: 'blastoise',
             notes: ''},
             {name: 'magmar',
             nickname: '',
             level: 50,
-            acquired: '',
+            levelMet: 5,
+            currentEvo: 'magmar',
             notes: ''},
             {name: 'pupitar',
             nickname: '',
             level: 50,
-            acquired: '',
+            levelMet: 5,
+            currentEvo: 'pupitar',
             notes: ''},
             {name: 'umbreon',
             nickname: '',
             level: 50,
-            acquired: '',
+            levelMet: 5,
+            currentEvo: 'umbreon',
             notes: ''},
             {name: 'crobat',
             nickname: '',
             level: 50,
-            acquired: '',
+            levelMet: 5,
+            currentEvo: 'crobat',
             notes: ''},
             {name: 'dialga',
             nickname: '',
             level: 50,
-            acquired: '',
+            levelMet: 5,
+            currentEvo: 'dialga',
             notes: ''}
         ]
     }
@@ -84,15 +96,90 @@ export interface Player {
     pokemonList: Pokemon[];
 }
 
+export interface LinkData {
+    trainer: string;
+    pkmn: Pokemon;
+}
+
+export interface Link {
+    player1: LinkData;
+    player2: LinkData;
+    encounter: Encounter;
+    status: PokemonStatus;
+}
+// [
+//     {
+//         player1: {
+//             trainer: 'Big G',
+//             pkmn: {
+//                 name: data.name,
+//                 nickname: 'test',
+//                 level: 50,
+//                 
+//                 sprite: data.sprites.front_default,
+//                 status: PokemonStatus.Party,
+//                 notes: ''
+//               }
+//         },
+//         player2: {
+//             trainer: 'Big J',
+//             pkmn: {
+//                 name: data.name,
+//                 nickname: 'test',
+//                 level: 50,
+//                 
+//                 sprite: data.sprites.front_default,
+//                 status: PokemonStatus.Party,
+//                 notes: ''
+//               }
+//         }
+//         encounter: {
+//             route: 'route 1';
+//             status: EncounterStatus.Success;
+//             notes: ''
+//         }
+//     },
+//     {
+//         player1: {
+//             trainer: 'Big G',
+//             pkmn: {
+//                 name: data.name,
+//                 nickname: 'test',
+//                 level: 50,
+//                 
+//                 sprite: data.sprites.front_default,
+//                 status: PokemonStatus.Party,
+//                 notes: ''
+//               }
+//         },
+//         player2: {
+//             trainer: 'Big J',
+//             pkmn: {
+//                 name: data.name,
+//                 nickname: 'test',
+//                 level: 50,
+//                 
+//                 sprite: data.sprites.front_default,
+//                 status: PokemonStatus.Party,
+//                 notes: ''
+//               }
+//         }
+//         encounter: {
+//             route: 'route 1';
+//             status: EncounterStatus.Success;
+//             notes: ''
+//         }
+//     }
+// ]
+
 export interface Pokemon {
     name: string;
     nickname: string;
     level: number;
     sprite: string;
-    acquired: Encounter | string;
-    status: PokemonStatus;
+    levelMet: number;
+    currentEvo: string;
     notes: string;
-    linkedTo?: Pokemon;
 }
 
 export interface Encounter {

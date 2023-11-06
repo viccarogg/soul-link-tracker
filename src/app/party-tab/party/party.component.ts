@@ -16,20 +16,20 @@ export class PartyComponent implements OnInit {
 
   ngOnInit(): void {
     for(let p of this.player.pokemonList) {
-      this.pokeApi.getByName(p.name).subscribe((data) => {
-        this.party.push(this.createPokemon(data))
+      this.pokeApi.getByName(p.currentEvo).subscribe((data) => {
+        this.party.push(this.createPokemon(p, data))
       })
     }
    }
 
-  createPokemon(data: any): Pokemon {
+  createPokemon(p: Pokemon, data: any): Pokemon {
     let pkmn = {
-      name: data.name,
+      name: p.currentEvo,
       nickname: 'test',
       level: 50,
-      acquired: '',
       sprite: data.sprites.front_default,
-      status: PokemonStatus.Party,
+      levelMet: 5,
+      currentEvo: data.name,
       notes: ''
     }
 
