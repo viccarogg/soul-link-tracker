@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common'
 import { BrowserModule } from '@angular/platform-browser';
 import { MatTabsModule } from '@angular/material/tabs'; 
 import { HttpClientModule } from '@angular/common/http'; 
@@ -23,6 +24,7 @@ import { EncounterTabComponent } from './encounter-tab/encounter-tab.component';
     MatTabsModule,
     BrowserModule,
     BrowserAnimationsModule,
+    CommonModule,
     HttpClientModule
   ],
   providers: [],
