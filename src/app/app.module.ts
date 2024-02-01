@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common'
 import { BrowserModule } from '@angular/platform-browser';
 import { MatTabsModule } from '@angular/material/tabs'; 
+import { MatCardModule } from '@angular/material/card';
 import { HttpClientModule } from '@angular/common/http'; 
 
 import { PartyComponent } from './party-tab/party/party.component';
@@ -22,6 +23,7 @@ import { EncounterTabComponent } from './encounter-tab/encounter-tab.component';
   ],
   imports: [
     MatTabsModule,
+    MatCardModule,
     BrowserModule,
     BrowserAnimationsModule,
     CommonModule,

@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Pokemon } from 'src/lib/models/Types';
 
 @Component({
   selector: 'app-pokemon',
@@ -6,11 +7,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./pokemon.component.css']
 })
 export class PokemonComponent {
-  @Input() pkmn = {
-    sprite: '',
-    name: '',
-    level: 50
-  };
+  @Input() pkmn: any;
 
 
 }

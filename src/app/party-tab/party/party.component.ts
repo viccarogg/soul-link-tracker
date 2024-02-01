@@ -20,13 +20,14 @@ export class PartyComponent implements OnInit {
         this.party.push(this.createPokemon(p, data))
       })
     }
-   }
+  }
 
   createPokemon(p: Pokemon, data: any): Pokemon {
     let pkmn = {
       ...p,
-      sprite: data.sprites.front_default
+      sprite: data.sprites.front_default,
+      icon: data.sprites.versions['generation-viii'].icons.front_default
     }
     return pkmn;
-   }
+  }
 }

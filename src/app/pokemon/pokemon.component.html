@@ -1,5 +1,16 @@
-<div>
-    <img src="{{pkmn.sprite}}">
-    <b class="name">{{pkmn.name}}</b>
-    {{pkmn.level}}
-</div>
+<mat-card class="example-card">
+    <mat-card-header>
+        <img mat-card-avatar class="example-header-image" src="{{pkmn.icon}}">
+        <mat-card-title class="name">{{pkmn.nickname}}</mat-card-title>
+        <mat-card-subtitle class="name">{{pkmn.name}} Lv. {{pkmn.level}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <img mat-card-image src="{{pkmn.sprite}}">
+    </mat-card-content>
+    <mat-card-actions>
+        <label for="notes">Notes: </label>
+        
+        <textarea name="notes" id="notes-input" value="{{pkmn.notes}}" disabled></textarea>
+    </mat-card-actions>
+</mat-card>
+  
